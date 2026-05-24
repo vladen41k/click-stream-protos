@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package nas;
+
+option go_package = "github.com/vladen41k/click-stream-protos/gen/go/proto/event/v1;eventv1";
+
+import "google/protobuf/struct.proto";
+import "google/protobuf/timestamp.proto";
+
+service EventService {
+  rpc CreateEvent(EventRequest) returns (EventResponse);
+}
+
+message EventRequest {
+  string event_id = 1;
+  string event_type = 2;
+  string session_id = 3;
+  string page_url = 4;
+  optional string element_id = 5;
+  google.protobuf.Timestamp timestamp = 6;
+  google.protobuf.Timestamp received_at = 7;
+  google.protobuf.Struct metadata = 8;
+}
+
+message EventResponse {
+  string status = 1;
+  string message = 2;
+}
