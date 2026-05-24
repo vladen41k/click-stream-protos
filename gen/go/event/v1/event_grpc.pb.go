@@ -19,7 +19,7 @@ import (
 const _ = grpc.SupportPackageIsVersion9
 
 const (
-	EventService_CreateEvent_FullMethodName = "/nas.EventService/CreateEvent"
+	EventService_CreateEvent_FullMethodName = "/event.v1.EventService/CreateEvent"
 )
 
 // EventServiceClient is the client API for EventService service.
@@ -108,7 +108,7 @@ func _EventService_CreateEvent_Handler(srv interface{}, ctx context.Context, dec
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var EventService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "nas.EventService",
+	ServiceName: "event.v1.EventService",
 	HandlerType: (*EventServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

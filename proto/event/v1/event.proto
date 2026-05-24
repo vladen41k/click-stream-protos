@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-package nas;
+package event.v1;
 
-option go_package = "github.com/vladen41k/click-stream-protos/gen/go/proto/event/v1;eventv1";
+option go_package = "github.com/vladen41k/click-stream-protos/gen/go/event/v1;eventv1";
 
 import "google/protobuf/struct.proto";
 import "google/protobuf/timestamp.proto";

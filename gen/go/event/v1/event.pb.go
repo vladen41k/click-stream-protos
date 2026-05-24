@@ -179,7 +179,7 @@ var File_event_v1_event_proto protoreflect.FileDescriptor
 
 const file_event_v1_event_proto_rawDesc = "" +
 	"\n" +
-	"\x14event/v1/event.proto\x12\x03nas\x1a\x1cgoogle/protobuf/struct.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\xe1\x02\n" +
+	"\x14event/v1/event.proto\x12\bevent.v1\x1a\x1cgoogle/protobuf/struct.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\xe1\x02\n" +
 	"\fEventRequest\x12\x19\n" +
 	"\bevent_id\x18\x01 \x01(\tR\aeventId\x12\x1d\n" +
 	"\n" +
@@ -196,9 +196,9 @@ const file_event_v1_event_proto_rawDesc = "" +
 	"\v_element_id\"A\n" +
 	"\rEventResponse\x12\x16\n" +
 	"\x06status\x18\x01 \x01(\tR\x06status\x12\x18\n" +
-	"\amessage\x18\x02 \x01(\tR\amessage2D\n" +
-	"\fEventService\x124\n" +
-	"\vCreateEvent\x12\x11.nas.EventRequest\x1a\x12.nas.EventResponseBHZFgithub.com/vladen41k/click-stream-protos/gen/go/proto/event/v1;eventv1b\x06proto3"
+	"\amessage\x18\x02 \x01(\tR\amessage2N\n" +
+	"\fEventService\x12>\n" +
+	"\vCreateEvent\x12\x16.event.v1.EventRequest\x1a\x17.event.v1.EventResponseBBZ@github.com/vladen41k/click-stream-protos/gen/go/event/v1;eventv1b\x06proto3"
 
 var (
 	file_event_v1_event_proto_rawDescOnce sync.Once
@@ -214,17 +214,17 @@ func file_event_v1_event_proto_rawDescGZIP() []byte {
 
 var file_event_v1_event_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_event_v1_event_proto_goTypes = []any{
-	(*EventRequest)(nil),          // 0: nas.EventRequest
-	(*EventResponse)(nil),         // 1: nas.EventResponse
+	(*EventRequest)(nil),          // 0: event.v1.EventRequest
+	(*EventResponse)(nil),         // 1: event.v1.EventResponse
 	(*timestamppb.Timestamp)(nil), // 2: google.protobuf.Timestamp
 	(*structpb.Struct)(nil),       // 3: google.protobuf.Struct
 }
 var file_event_v1_event_proto_depIdxs = []int32{
-	2, // 0: nas.EventRequest.timestamp:type_name -> google.protobuf.Timestamp
-	2, // 1: nas.EventRequest.received_at:type_name -> google.protobuf.Timestamp
-	3, // 2: nas.EventRequest.metadata:type_name -> google.protobuf.Struct
-	0, // 3: nas.EventService.CreateEvent:input_type -> nas.EventRequest
-	1, // 4: nas.EventService.CreateEvent:output_type -> nas.EventResponse
+	2, // 0: event.v1.EventRequest.timestamp:type_name -> google.protobuf.Timestamp
+	2, // 1: event.v1.EventRequest.received_at:type_name -> google.protobuf.Timestamp
+	3, // 2: event.v1.EventRequest.metadata:type_name -> google.protobuf.Struct
+	0, // 3: event.v1.EventService.CreateEvent:input_type -> event.v1.EventRequest
+	1, // 4: event.v1.EventService.CreateEvent:output_type -> event.v1.EventResponse
 	4, // [4:5] is the sub-list for method output_type
 	3, // [3:4] is the sub-list for method input_type
 	3, // [3:3] is the sub-list for extension type_name
